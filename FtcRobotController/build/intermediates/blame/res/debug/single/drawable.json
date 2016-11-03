@@ -8,8 +8,24 @@
         "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/Blocks-release/res/drawable/black_border.xml"
     },
     {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/debug/drawable/button_shape.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/drawable/button_shape.xml"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/debug/drawable/black_border.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/Blocks-release/res/drawable/black_border.xml"
+    },
+    {
         "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/debug/drawable/button_shape.xml",
         "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/drawable/button_shape.xml"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/debug/drawable/icon_robotcontroller.png",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_robotcontroller.png"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/debug/drawable/icon_menu.png",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_menu.png"
     },
     {
         "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/debug/drawable/icon_menu.png",

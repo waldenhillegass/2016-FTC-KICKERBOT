@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/drawable-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/drawable-xxhdpi-v4/ic_launcher.png",
         "source": "/Users/walden/code/code/ftcNew/FtcRobotController/src/main/res/drawable-xxhdpi/ic_launcher.png"
     }

@@ -4,6 +4,14 @@
         "source": "/Users/walden/code/code/ftcNew/FtcRobotController/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/button_shape.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/drawable-hdpi-v4/button_shape.xml"
+    },
+    {
         "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/button_shape.xml",
         "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/drawable-hdpi-v4/button_shape.xml"
     }
