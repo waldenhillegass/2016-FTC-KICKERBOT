@@ -91,7 +91,6 @@ public class Hoco2016 extends LinearOpMode {
 
             // Use gamepad Y & A raise and lower the arm
 
-
             // Send telemetry message to signify robot running;
 
             telemetry.addData("left",  "%.2f", left);

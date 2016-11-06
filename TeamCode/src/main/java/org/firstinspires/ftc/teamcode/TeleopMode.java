@@ -143,8 +143,20 @@ public class TeleopMode extends OpMode {
                 leftThrottle = 0;
             }
         }
+        if(gamepad1.a){
+            robot.rack.setPower(1);
 
+        }
+        if(gamepad1.b){
+            robot.rack.setPower(-1);
+        }
 
+        if(gamepad1.x){
+            robot.groundSensor.enableLed(true);
+        }
+        if(gamepad1.y){
+            robot.groundSensor.enableLed(false);
+        }
 
 
 

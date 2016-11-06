@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor;
 import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -33,6 +34,7 @@ public class  HocoHardware
     public ColorSensor groundSensor;
     public ColorSensor pokerColor;
     public ModernRoboticsI2cGyro gyro;
+    public DcMotor rack = null;
 
     public Servo foot;
     public Servo leftie;
@@ -58,6 +60,8 @@ public class  HocoHardware
         // Define and Initialize Motors
         leftMotor   = hwMap.dcMotor.get("left motor");
         rightMotor  = hwMap.dcMotor.get("right motor");
+        rack = hwMap.dcMotor.get("rack");
+
 
         foot = hwMap.servo.get("foot");
         leftie = hwMap.servo.get("leftie");
@@ -68,10 +72,15 @@ public class  HocoHardware
         leftMotor.setPower(0);
         rightMotor.setPower(0);
 
+        gyro = (ModernRoboticsI2cGyro)hwMap.gyroSensor.get("gyro");
+        groundSensor = (ModernRoboticsI2cColorSensor)hwMap.get("groundcolor");
+
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
         leftMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
+
 
         // Define and initialize ALL installed servos.
 
