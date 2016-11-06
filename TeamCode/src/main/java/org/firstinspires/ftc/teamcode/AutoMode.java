@@ -145,17 +145,20 @@ public class AutoMode extends OpMode
                 }
                 break;
 
-            case 2:
+            case 2: //This Case drives the robot straight for 12.56 rotations
                 resetDriveEncoders();
-                if (averageEncoders() < 1440 * 12.56){
-                    driveStraightGodDamnIt(.75);
+                if (averageEncoders() < 1440 * 12.56) {//there are 1440 ticks per each revolution
+                    driveStraightGodDamnIt(.75);//Dank method name
                 }
                 else {
                     resetDriveEncoders();
                     autoState++;
+                    leftThrottle = 0;
+                    rightThrottle = 0;
                 }
                 break;
-
+            //Target heading is zero
+            
             case 3:
                 if (robot.gyro.getHeading() < 345){
                     leftThrottle = .5;
