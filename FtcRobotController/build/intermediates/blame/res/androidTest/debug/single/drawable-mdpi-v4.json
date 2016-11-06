@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_launcher.png",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_launcher.png"
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/ic_launcher.png",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_launcher.png"
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
     }
 ]

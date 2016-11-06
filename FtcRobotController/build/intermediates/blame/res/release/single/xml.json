@@ -1,58 +1,86 @@
 [
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/xml/device_filter.xml",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/src/main/res/xml/device_filter.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\k9usbbot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9usbbot.xml"
     },
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/xml/k9usbbot.xml",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9usbbot.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\device_filter.xml",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\src\\main\\res\\xml\\device_filter.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/xml/pushbotsens.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbotsens.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\pushbot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbot.xml"
     },
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/xml/squarebot.xml",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/squarebot.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\pushbot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbot.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/xml/device_filter.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/src/main/res/xml/device_filter.xml"
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\device_filter.xml",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\src\\main\\res\\xml\\device_filter.xml"
     },
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/xml/pushbot.xml",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbot.xml"
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\squarebot.xml",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\squarebot.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/xml/k9legacybot.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9legacybot.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\preferences.xml",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\src\\main\\res\\xml\\preferences.xml"
     },
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/xml/pushbotsens.xml",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbotsens.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\k9usbbot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9usbbot.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/xml/preferences.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/src/main/res/xml/preferences.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\pushbotsens.xml",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbotsens.xml"
     },
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/xml/preferences.xml",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/src/main/res/xml/preferences.xml"
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\preferences.xml",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\src\\main\\res\\xml\\preferences.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/xml/k9usbbot.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9usbbot.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\preferences.xml",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\src\\main\\res\\xml\\preferences.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/xml/squarebot.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/squarebot.xml"
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\pushbotsens.xml",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbotsens.xml"
     },
     {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/release/xml/k9legacybot.xml",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9legacybot.xml"
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\k9usbbot.xml",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9usbbot.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/release/xml/pushbot.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbot.xml"
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\k9legacybot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9legacybot.xml"
+    },
+    {
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\pushbot.xml",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbot.xml"
+    },
+    {
+        "merged": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\k9legacybot.xml",
+        "source": "E:\\Programming\\Robotics\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9legacybot.xml"
+    },
+    {
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\device_filter.xml",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\src\\main\\res\\xml\\device_filter.xml"
+    },
+    {
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\k9legacybot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9legacybot.xml"
+    },
+    {
+        "merged": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\squarebot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\ftcNew\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\squarebot.xml"
+    },
+    {
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\squarebot.xml",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\squarebot.xml"
+    },
+    {
+        "merged": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\xml\\pushbotsens.xml",
+        "source": "E:\\Users\\walden\\code\\code\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbotsens.xml"
     }
 ]
