@@ -62,7 +62,7 @@ public class ProgbotHardware {
         leftMotor.setPower(0);
         rightMotor.setPower(0);
         //gang
-        
+
 
         groundSensor = (ModernRoboticsI2cColorSensor) hwMap.get("color");
 
