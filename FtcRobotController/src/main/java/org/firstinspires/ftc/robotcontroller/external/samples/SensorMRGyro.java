@@ -67,6 +67,7 @@ public class SensorMRGyro extends LinearOpMode {
 
     // start calibrating the gyro.
     telemetry.addData(">", "Gyro Calibrating. Do Not move!");
+    telemetry.addData(gyro.getConnectionInfo(), "");
     telemetry.update();
     gyro.calibrate();
 

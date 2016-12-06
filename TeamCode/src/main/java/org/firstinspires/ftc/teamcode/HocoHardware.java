@@ -61,12 +61,12 @@ public class  HocoHardware
         leftMotor   = hwMap.dcMotor.get("left motor");
         rightMotor  = hwMap.dcMotor.get("right motor");
         rack = hwMap.dcMotor.get("rack");
-
+        rack.setDirection(DcMotor.Direction.REVERSE);
 
         foot = hwMap.servo.get("foot");
         leftie = hwMap.servo.get("leftie");
         rightie = hwMap.servo.get("rightie");
-        leftMotor.setDirection(DcMotor.Direction.REVERSE);
+        rightMotor.setDirection(DcMotor.Direction.REVERSE);
 
         // Set all motors to zero power
         leftMotor.setPower(0);

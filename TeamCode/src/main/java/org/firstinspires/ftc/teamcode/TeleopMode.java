@@ -40,6 +40,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.VoltageSensor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.hardware.ColorSensor;
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro;
 
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
@@ -70,6 +71,7 @@ public class TeleopMode extends OpMode {
     private final double LIGHT_THRESHOLD = 100;
     private boolean isFirstTime = true;
      private int targetHeading = 0;
+    private boolean flippersLocked = true;
 
     HocoHardware robot = new HocoHardware();
 
@@ -84,7 +86,7 @@ public class TeleopMode extends OpMode {
 
 
         robot.init(hardwareMap);
-
+        robot.gyro.calibrate();
 
 
         if (getBatteryVoltage() < 12) telemetry.addData("BATTERY VOLTAGE LOW", getBatteryVoltage());
@@ -114,12 +116,19 @@ public class TeleopMode extends OpMode {
      */
     @Override
     public void init_loop() {
+        if (!robot.gyro.isCalibrating()) {
+            telemetry.addData("gryo calibrated!", robot.gyro.getHeading());
+
+        } else {
+            telemetry.addData("gryo is calibrating", "");
+        }
+        telemetry.update();
     }
 
 
     @Override
     public void start() {
-        telemetry.addData("Blast Off", " All Systems are GO!");
+        //telemetry.addData("Blast Off", " All Systems are GO!");
         runtime.reset();
     }
 
@@ -129,27 +138,27 @@ public class TeleopMode extends OpMode {
     @Override
     public void loop() {
         telemetry.addData("Status", "Running: " + runtime.toString());
-        leftThrottle = gamepad1.left_stick_y;
-        rightThrottle = gamepad1.right_stick_y;
+        leftThrottle = -gamepad1.left_stick_y;
+        rightThrottle = -gamepad1.right_stick_y;
 
-        if (gamepad1.right_bumper) {
-            leftThrottle = leftThrottle / 2;
-            rightThrottle = rightThrottle / 2;
+
             //makes the throttle less sensitive if right bumper is pressed.
-        }
+
         if (gamepad1.left_bumper){
             if (robot.groundSensor.alpha() > LIGHT_THRESHOLD) {
                 leftThrottle = 0;
                 leftThrottle = 0;
             }
         }
-        if(gamepad1.a){
-            robot.rack.setPower(1);
 
+
+        if (gamepad2.a) {
+            flippersLocked = true;
         }
-        if(gamepad1.b){
-            robot.rack.setPower(-1);
+        if (gamepad2.left_trigger != 0 || gamepad2.right_trigger != 0) {
+            flippersLocked = false;
         }
+
 
         if(gamepad1.x){
             robot.groundSensor.enableLed(true);
@@ -159,15 +168,30 @@ public class TeleopMode extends OpMode {
         }
 
 
+        if (gamepad2.dpad_down) robot.foot.setPosition(-1);
+        if (gamepad2.dpad_up) robot.foot.setPosition(.9);
+
+        if (!flippersLocked) {
+            robot.leftie.setPosition(gamepad2.left_trigger);
+            robot.rightie.setPosition(-gamepad2.right_trigger + 1);
+        } else {
+            robot.leftie.setPosition(1);
+            robot.rightie.setPosition(0);
+        }
 
 
-
-        if(gamepad1.dpad_down) robot.foot.setPosition(-1);
-         if (gamepad1.dpad_up) robot.foot.setPosition(1);
-
-
-        robot.leftie.setPosition(gamepad1.left_trigger);
-        robot.rightie.setPosition(- gamepad1.right_trigger + 1);
+        if (gamepad2.right_bumper) {
+            // if(Math.abs(robot.rack.getCurrentPosition())<6000){
+            robot.rack.setPower(1);
+            // }
+            // if(gamepad2.y){
+            //   robot.rack.setPower(1);
+            // }
+        } else if (gamepad2.left_bumper) robot.rack.setPower(-1);
+        else {
+            robot.rack.setPower(0);
+        }
+        telemetry.addData("Rack Encoder:", robot.rack.getCurrentPosition());
 
 //elchawpawashere
         //flexonurxbox
@@ -181,6 +205,10 @@ public class TeleopMode extends OpMode {
         robot.rightMotor.setPower(rightThrottle);
         robot.leftMotor.setPower(leftThrottle);
 
+        if (!(gamepad2.left_stick_y == 0)) {
+            robot.foot.setPosition(gamepad2.left_stick_y);
+            telemetry.addData("", robot.foot.getPosition());
+        }
 
         telemetry.update();
 
@@ -192,6 +220,7 @@ public class TeleopMode extends OpMode {
     @Override
     public void stop() {
         telemetry.addData("Nice Job Driver!", "");
+        telemetry.update();
     }
 
     double getBatteryVoltage() {
@@ -205,25 +234,10 @@ public class TeleopMode extends OpMode {
         return result;
     }
 
-    void driveStraightGodDamnIt(double speed){
 
-        if (isFirstTime) {
-           targetHeading = robot.gyro.getHeading();
-            isFirstTime = false;
-        }
-        isFirstTime = false;
-        int error = targetHeading - robot.gyro.getHeading();
-        double correctionFactor = (error/75.0);
-
-        if(targetHeading > (robot.gyro.getHeading() - 0.5) || targetHeading < (robot.gyro.getHeading() + 0.5))
-        {
-            leftThrottle = (speed - correctionFactor);
-            rightThrottle = (speed + correctionFactor);
-        }
-
-    }
 
     double clipRanges(double whatIAmClipping){
+
         whatIAmClipping = Math.min(whatIAmClipping, 1);
         whatIAmClipping = Math.max (whatIAmClipping , -1);
 

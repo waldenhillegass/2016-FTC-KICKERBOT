@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/header.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/2016-FTC-KICKERBOT/FtcRobotController/unspecified/res/layout/header.xml"
-    },
-    {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/analog_outputs.xml",
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/analog_outputs.xml"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/header.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/2016-FTC-KICKERBOT/FtcRobotController/unspecified/res/layout/header.xml"
     },
     {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/matrix_devices.xml",
@@ -32,12 +32,12 @@
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/shape.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/motor_controller_banner.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor_controller_banner.xml"
-    },
-    {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/activity_inspection.xml",
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/layout/activity_inspection.xml"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/motor_controller_banner.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor_controller_banner.xml"
     },
     {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/darker_gray_line.xml",
@@ -172,12 +172,12 @@
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/port_attached_row.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/port_attached_row.xml"
-    },
-    {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/info_button.xml",
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/info_button.xml"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/port_attached_row.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/port_attached_row.xml"
     },
     {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/i2cs.xml",

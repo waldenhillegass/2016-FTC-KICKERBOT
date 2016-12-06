@@ -4,27 +4,27 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="16959791024071"
+    timestamp="79024624089840"
     token="4577525756213075074" >
 
     <task
         name="javac"
-        duration="81" />
+        duration="66" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="19" />
+        duration="10" />
     <task
         name="verifier"
-        duration="7" />
+        duration="2" />
 
     <artifact
         location="/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/outputs/apk/TeamCode-debug.apk"
         type="MAIN" />
 
-    <build timestamp="16959791024071" >
+    <build timestamp="79024624089840" >
         <artifact
             location="/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/outputs/apk/TeamCode-debug.apk"
             type="MAIN" />

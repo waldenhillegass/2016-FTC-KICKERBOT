@@ -77,16 +77,19 @@ public class OPMODEJESUS
     // manager.register("Auto Drive Encoder",     PushbotAutoDriveByEncoder_Linear.class);
     // manager.register("Auto Drive Time",        PushbotAutoDriveByTime_Linear.class);
     // manager.register("Auto Drive Line",        PushbotAutoDriveToLine_Linear.class);
-      manager.register("Hoco",               Hoco2016.class);
+      //manager.register("Hoco",               Hoco2016.class);
       manager.register("TeleOp",             TeleopMode.class);
-      manager.register("AutoMode",           AutoMode.class);
+      manager.register("Hoco Bot tester", DriveToHeading.class);
+      manager.register("Ball Knocker", BallKnocker2.class);
+
     // Sensor Samples
     // manager.register("AdaFruit Color",         SensorAdafruitRGB.class);
     // manager.register("HT Color",               SensorHTColor.class);
     // manager.register("LEGO Light",             SensorLEGOLight.class);
     // manager.register("LEGO Touch",             SensorLEGOTouch.class);
     // manager.register("MR Color",               SensorMRColor.class);
-    // manager.register("MR Gyro",                SensorMRGyro.class);
+      manager.register("MR Gyro", Gyro.class);
+
     // manager.register("MR IR Seeker",           SensorMRIrSeeker.class);
     // manager.register("MR ODS",                 SensorMROpticalDistance.class);
 
