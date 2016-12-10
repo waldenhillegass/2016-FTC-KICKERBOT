@@ -65,15 +65,17 @@ public class DriveToHeading extends OpMode {
     /* Declare OpMode members. */
     ProgbotHardware robot = new ProgbotHardware();
     private ElapsedTime runtime = new ElapsedTime();// Use a K9'shardware
-    double leftThrottle = 0;
-    double rightThrottle = 0;
-    double correctionFactor = 0;
+    private double leftThrottle = 0;
+    private double rightThrottle = 0;
+    double correctionFactor = 1;
     double targetHeading = 0;
 
     @Override
     public void init() {
         robot.init(hardwareMap);
         robot.gyro.calibrate();
+        rightThrottle = 0;
+        leftThrottle = 0;
 
     }
 
@@ -87,16 +89,15 @@ public class DriveToHeading extends OpMode {
 
 
         if (robot.gyro.isCalibrating()) {
-            telemetry.addData("we calibrating", "");
+            telemetry.addData("Gyro is calibrating. Please do not move robot.", "");
         } else {
-            telemetry.addData("Hell naw", "");
+            telemetry.addData("Done.", "");
         }
         telemetry.update();
 
 
         // Send telemetry message to signify robot waiting;
-        //   telemetry.addData("Say", "Dick");    //
-        // telemetry.update();
+        //   telemetry.addData("Say", "Dick");
 
         // Wait for the game to start (driver presses PLAY)
 
@@ -104,13 +105,24 @@ public class DriveToHeading extends OpMode {
         // run until the end of the match (driver presses STOP)
     }
 
+    @Override
     public void start() {
         runtime.reset();
+        rightThrottle = 0;
+        leftThrottle = 0;
     }
 
+    @Override
     public void loop() {
 
+        if (correctionFactor == 0) correctionFactor = 1;
+
         driveToHeading(targetHeading, gamepad1.right_trigger);
+
+        if (gamepad1.left_bumper) {
+            leftThrottle = -1;
+            rightThrottle = -1;
+        }
 
         if (gamepad1.right_bumper) {
             leftThrottle = 1;
@@ -123,34 +135,43 @@ public class DriveToHeading extends OpMode {
             } else {
                 targetHeading += .5;
             }
+
         } else if (gamepad1.dpad_left) {
-            if (targetHeading <= 0) {
+            if (targetHeading < 0) {
                 targetHeading = 359;
             } else {
                 targetHeading -= .25;
             }
         }
 
-        if (gamepad1.dpad_up) {
+        if (gamepad1.dpad_up || correctionFactor == 0) {
             correctionFactor += .25;
         } else if (gamepad1.dpad_down) {
             correctionFactor -= .25;
         }
 
 
-        telemetry.addData("left", "%.2f", leftThrottle);
-        telemetry.addData("right", "%.2f", rightThrottle);
-        telemetry.addData("target heading", "%.2f", targetHeading);
-        telemetry.addData("correction factor", "%.2f", correctionFactor);
-        telemetry.addData("current heading", "%.2f", robot.gyro.getHeading());
+        telemetry.addData("left", leftThrottle);
+        telemetry.addData("right", rightThrottle);
+        telemetry.addData("target heading", targetHeading);
+        telemetry.addData("correction factor", correctionFactor);
+        telemetry.addData("current heading", robot.gyro.getHeading());
         telemetry.update();
 
+        leftThrottle = Range.clip(leftThrottle, -1, 1);
+        rightThrottle = Range.clip(rightThrottle, -1, 1);
+
+
+        robot.rightMotor.setPower(rightThrottle);
+        robot.leftMotor.setPower(leftThrottle);
+//ifsvYmcf
         // Pause for metronome tick.  40 mS each cycle = update 25 times a second.
 
     }
 
 
     private void driveToHeading(double target, double speed) {
+
         double current = robot.gyro.getHeading();
         double difference = target - current;
         while (difference > 180) {
@@ -170,5 +191,14 @@ public class DriveToHeading extends OpMode {
 
         rightThrottle = rightMotor;
         leftThrottle = leftMotor;
+    }
+
+    double clipRanges(double whatIAmClipping) {
+
+        whatIAmClipping = Math.min(whatIAmClipping, 1);
+        whatIAmClipping = Math.max(whatIAmClipping, -1);
+
+        return whatIAmClipping;
+
     }
 }

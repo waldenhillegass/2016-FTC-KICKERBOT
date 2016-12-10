@@ -120,12 +120,12 @@
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/i2c_device.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/activity_load.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_load.xml"
-    },
-    {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/item_list_parent.xml",
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/item_list_parent.xml"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/activity_load.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/activity_load.xml"
     },
     {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/orange_warning.xml",
@@ -172,12 +172,12 @@
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/motor.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/info_button.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/info_button.xml"
-    },
-    {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/port_attached_row.xml",
         "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/port_attached_row.xml"
+    },
+    {
+        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/info_button.xml",
+        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/layout/info_button.xml"
     },
     {
         "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/layout/i2cs.xml",
