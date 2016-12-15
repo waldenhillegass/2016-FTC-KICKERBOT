@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/FtcRobotController/src/main/res/drawable-mdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/walden/code/code/ftcNew/FtcRobotController/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
-        "source": "/Users/walden/code/code/ftcNew/FtcRobotController/src/main/res/drawable-mdpi/ic_launcher.png"
+        "merged": "E:\\GitNew\\2016-FTC-KICKERBOT\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\GitNew\\2016-FTC-KICKERBOT\\FtcRobotController\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }
 ]

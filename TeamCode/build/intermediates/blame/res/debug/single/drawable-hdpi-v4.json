@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/drawable-hdpi-v4/button_shape.xml",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/drawable-hdpi-v4/button_shape.xml"
+        "merged": "E:\\GitNew\\2016-FTC-KICKERBOT\\TeamCode\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\button_shape.xml",
+        "source": "E:\\GitNew\\2016-FTC-KICKERBOT\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable-hdpi-v4\\button_shape.xml"
     },
     {
-        "merged": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/exploded-aar/2016-FTC-KICKERBOT/FtcRobotController/unspecified/res/drawable-hdpi-v4/ic_launcher.png"
+        "merged": "E:\\GitNew\\2016-FTC-KICKERBOT\\TeamCode\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\GitNew\\2016-FTC-KICKERBOT\\TeamCode\\build\\intermediates\\exploded-aar\\2016-FTC-KICKERBOT\\FtcRobotController\\unspecified\\res\\drawable-hdpi-v4\\ic_launcher.png"
     }
 ]
