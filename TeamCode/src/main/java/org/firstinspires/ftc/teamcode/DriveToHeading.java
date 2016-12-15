@@ -64,7 +64,8 @@ public class DriveToHeading extends OpMode {
 
     /* Declare OpMode members. */
     ProgbotHardware robot = new ProgbotHardware();
-    private ElapsedTime runtime = new ElapsedTime();// Use a K9'shardware
+    private ElapsedTime runtime = new ElapsedTime();
+    // Use a K9'shardware
     private double leftThrottle = 0;
     private double rightThrottle = 0;
     double correctionFactor = 1;
@@ -115,7 +116,7 @@ public class DriveToHeading extends OpMode {
     @Override
     public void loop() {
 
-        if (correctionFactor == 0) correctionFactor = 1;
+        if (correctionFactor <= 0) correctionFactor = 1;
 
         driveToHeading(targetHeading, gamepad1.right_trigger);
 
@@ -144,7 +145,7 @@ public class DriveToHeading extends OpMode {
             }
         }
 
-        if (gamepad1.dpad_up || correctionFactor == 0) {
+        if (gamepad1.dpad_up) {
             correctionFactor += .25;
         } else if (gamepad1.dpad_down) {
             correctionFactor -= .25;
@@ -183,8 +184,8 @@ public class DriveToHeading extends OpMode {
         }
         double correction = difference / correctionFactor;
 
-        double rightMotor = speed + (correction * speed);
-        double leftMotor = speed - (correction * speed);
+        double rightMotor = speed + (correction);
+        double leftMotor = speed - (correction);
 
         rightMotor = Math.max(0, Math.min(1, rightMotor));
         leftMotor = Math.max(0, Math.min(1, leftMotor));
