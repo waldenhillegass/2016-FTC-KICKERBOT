@@ -118,7 +118,7 @@ public class DriveToHeading extends OpMode {
 
         if (correctionFactor <= 0) correctionFactor = 1;
 
-        driveToHeading(targetHeading, gamepad1.right_trigger);
+        driveToHeading(targetHeading, gamepad1.right_trigger, correctionFactor);
 
         if (gamepad1.left_bumper) {
             leftThrottle = -1;
@@ -152,11 +152,11 @@ public class DriveToHeading extends OpMode {
         }
 
 
-        telemetry.addData("left", leftThrottle);
-        telemetry.addData("right", rightThrottle);
-        telemetry.addData("target heading", targetHeading);
-        telemetry.addData("correction factor", correctionFactor);
-        telemetry.addData("current heading", robot.gyro.getHeading());
+        telemetry.addData("Left", leftThrottle);
+        telemetry.addData("Right", rightThrottle);
+        telemetry.addData("Target Heading", targetHeading);
+        telemetry.addData("Correction Factor", correctionFactor);
+        telemetry.addData("Current Heading", robot.gyro.getHeading());
         telemetry.update();
 
         leftThrottle = Range.clip(leftThrottle, -1, 1);
@@ -171,7 +171,7 @@ public class DriveToHeading extends OpMode {
     }
 
 
-    private void driveToHeading(double target, double speed) {
+    public void driveToHeading(double target, double speed, double correctionFactor) {
 
         double current = robot.gyro.getHeading();
         double difference = target - current;

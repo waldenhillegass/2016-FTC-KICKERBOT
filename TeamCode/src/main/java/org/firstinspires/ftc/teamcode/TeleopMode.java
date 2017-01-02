@@ -187,7 +187,8 @@ public class TeleopMode extends OpMode {
             // if(gamepad2.y){
             //   robot.rack.setPower(1);
             // }
-        } else if (gamepad2.left_bumper) robot.rack.setPower(-1);
+        } else if (gamepad2.left_bumper)
+            robot.rack.setPower(-1);
         else {
             robot.rack.setPower(0);
         }

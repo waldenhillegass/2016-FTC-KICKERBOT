@@ -56,7 +56,7 @@ public class ProgbotHardware {
 
         gyro = (ModernRoboticsI2cGyro) hwMap.gyroSensor.get("gyro");
 
-        leftMotor.setDirection(DcMotor.Direction.REVERSE);
+        rightMotor.setDirection(DcMotor.Direction.REVERSE);
 
         // Set all motors to zero power
         leftMotor.setPower(0);

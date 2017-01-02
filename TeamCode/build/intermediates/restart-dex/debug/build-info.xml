@@ -4,43 +4,22 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="7741187429365"
-    token="4577525756213075074"
-    verifier="COMPATIBLE" >
+    timestamp="71130005991696"
+    token="4577525756213075074" >
 
     <task
         name="javac"
-        duration="44" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="411" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="5" />
+        duration="0" />
     <task
         name="verifier"
-        duration="1" />
+        duration="0" />
 
-    <artifact
-        location="/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
-
-    <build timestamp="6571279182524" >
-        <artifact
-            location="/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/outputs/apk/TeamCode-debug.apk"
-            type="MAIN" />
-    </build>
-    <build timestamp="7354102166296" >
-        <artifact
-            location="/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="7741187429365"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/walden/code/code/2016-FTC-KICKERBOT/TeamCode/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
+    <build timestamp="71130005991696" />
 
 </instant-run>

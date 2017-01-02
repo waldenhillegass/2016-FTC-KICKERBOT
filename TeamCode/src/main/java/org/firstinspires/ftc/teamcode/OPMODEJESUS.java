@@ -81,6 +81,7 @@ public class OPMODEJESUS
       manager.register("TeleOp",             TeleopMode.class);
       manager.register("Hoco Bot tester", DriveToHeading.class);
       manager.register("Ball Knocker", BallKnocker2.class);
+      manager.register("Auto", AutoMode.class);
 
     // Sensor Samples
     // manager.register("AdaFruit Color",         SensorAdafruitRGB.class);

@@ -32,6 +32,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
+import org.firstinspires.ftc.robotcore.external.Telemetry;
+
 /**
  * This file contains an example of an iterative (Non-Linear) "OpMode".
  * An OpMode is a 'program' that runs in either the autonomous or the teleop period of an FTC match.
@@ -52,11 +54,12 @@ public class AutoMode extends OpMode
 {
     /* Declare OpMode members. */
     private ElapsedTime runtime = new ElapsedTime();
-    private int autoState = 0;
+    private int autoState = 1;
     private double leftThrottle, rightThrottle;
-    HocoHardware robot = new HocoHardware();
-    private boolean isFirstTime = true;
-    private int targetHeading = 0;
+    ProgbotHardware robot = new ProgbotHardware();
+    private final double LIGHT_THRESHOLD = .5;
+    //private boolean isFirstTime = true;
+    //private int targetHeading = 0;
     // private DcMotor leftMotor = null;
     // private DcMotor rightMotor = null;
 
@@ -119,31 +122,21 @@ public class AutoMode extends OpMode
         switch (autoState){
             case 1:
                 //the target heading is 315 from the heading zero that the robot should be positioned at now.
-                if(robot.gyro.getHeading() > 330 || robot.gyro.getHeading() > 10)
+                driveToHeading(42, -.5, 5);
+                if (Math.abs(robot.gyro.getHeading() - 45) < 5)
                 {
-                    rightThrottle = .5;
-                    leftThrottle = -.5;
-                }else if(robot.gyro.getHeading() < 330)
-                {
-                    rightThrottle = .15;
-                    leftThrottle = -.15;
+                    autoState++;
+                    resetDriveEncoders();
                 }
-                else if(robot.gyro.getHeading() < 312){
-                    rightThrottle = -.1;
-                    leftThrottle = .1;
-                }else if (robot.gyro.getHeading() >= 314 || robot.gyro.getHeading() <= 317){
-                    rightThrottle = 0;
-                    leftThrottle = 0;
-                    autoState ++;
-                }
+
                 break;
 
             case 2: //This Case drives the robot straight for 12.56 rotations
-                resetDriveEncoders();
-                if (averageEncoders() < 1440 * 12.56) {//there are 1440 ticks per each revolution
-                    driveStraightGodDamnIt(.75);//Dank method name
-                }
-                else {
+
+                //there are 1440 ticks per each revolution
+                rightThrottle = (.5);
+                leftThrottle = (.5);
+                if (averageEncoders() > 1000) {
                     resetDriveEncoders();
                     autoState++;
                     leftThrottle = 0;
@@ -153,21 +146,21 @@ public class AutoMode extends OpMode
             //Target heading is zero
 
             case 3:
-                if (robot.gyro.getHeading() < 345){
-                    leftThrottle = .5;
-                    rightThrottle = -.5;
-                } else if (robot.gyro.getHeading() < 345 || (robot.gyro.getHeading() > 0 && robot.gyro.getHeading() < 10 )){
-                    leftThrottle = .15;
-                    rightThrottle = -.15;
-                } else if (robot.gyro.getHeading() < 2 && robot.gyro.getHeading() > 50){
-                    leftThrottle = -.1;
-                    rightThrottle = .1;
-                }else if (robot.gyro.getHeading() > 368 && robot.gyro.getHeading() < 2){
-                    leftThrottle = 0;
-                    rightThrottle = 0;
-                    resetDriveEncoders();
+                driveToHeading(0, -.5, 5);
+                if (robot.gyro.getHeading() < 3) {
                     autoState++;
+                    resetDriveEncoders();
                 }
+                break;
+            case 4:
+                driveToHeading(0, -.3, 10);
+                if (averageEncoders() > 10000 || robot.groundSensor.alpha() > LIGHT_THRESHOLD) {
+                    autoState++;
+                    resetDriveEncoders();
+
+                }
+            default:
+                telemetry.addData("An error has occured", "");
                 break;
 
 
@@ -176,6 +169,11 @@ public class AutoMode extends OpMode
 
 
         }
+        telemetry.addData("Current Heading", robot.gyro.getHeading());
+        telemetry.addData("AutoState", autoState);
+        telemetry.addData("Average Encoders", averageEncoders());
+        telemetry.addData("Left", leftThrottle);
+        telemetry.addData("Right", rightThrottle);
         robot.rightMotor.setPower(rightThrottle);
         robot.leftMotor.setPower(leftThrottle);
 
@@ -187,33 +185,20 @@ public class AutoMode extends OpMode
     @Override
     public void stop() {
     }
-    void driveStraightGodDamnIt(double speed){
 
-        if (isFirstTime) {
-            targetHeading = robot.gyro.getHeading();
-            isFirstTime = false;
-        }
-        isFirstTime = false;
-        int error = targetHeading - robot.gyro.getHeading();
-        double correctionFactor = (error/75.0);
-
-        if(targetHeading > (robot.gyro.getHeading() - 0.5) || targetHeading < (robot.gyro.getHeading() + 0.5))
-        {
-            leftThrottle = (speed - correctionFactor);
-            rightThrottle = (speed + correctionFactor);
-        }
-    }
 
     void resetDriveEncoders(){
         robot.leftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.rightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        robot.leftMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        robot.rightMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
     }
 
     int averageEncoders(){
         return (robot.leftMotor.getCurrentPosition() + robot.rightMotor.getCurrentPosition()) / 2;
     }
 
-    private void driveToHeading(double target, double speed){
+    private void driveToHeading(double target, double speed, double correctionfactor) {
         double current = robot.gyro.getHeading();
         double difference = target - current;
         while (difference > 180) {
@@ -223,7 +208,7 @@ public class AutoMode extends OpMode
         while (difference < -180) {
             difference = difference + 360;
         }
-        double correction = difference / 70;
+        double correction = difference / correctionfactor;
 
         double rightMotor = speed + (correction * speed);
         double leftMotor = speed - (correction * speed);
