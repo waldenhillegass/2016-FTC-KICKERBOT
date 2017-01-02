@@ -38,10 +38,7 @@ captures/
 
 # Keystore files
 *.jks
-
-.idea/libraries
-FtcRobotController/
-TeamCode/build
+.idea/
 doc/
 libs/
-gradle/	
+settings.gradle/
