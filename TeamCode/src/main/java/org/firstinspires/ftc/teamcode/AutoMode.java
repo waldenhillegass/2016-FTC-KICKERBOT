@@ -57,7 +57,7 @@ public class AutoMode extends OpMode
     private int autoState = 1;
     private double leftThrottle, rightThrottle;
     ProgbotHardware robot = new ProgbotHardware();
-    private final double LIGHT_THRESHOLD = .5;
+    private final double LIGHT_THRESHOLD = 4;
     //private boolean isFirstTime = true;
     //private int targetHeading = 0;
     // private DcMotor leftMotor = null;
@@ -97,11 +97,14 @@ public class AutoMode extends OpMode
         }else{
             telemetry.addData("gryo is calibrating", "");
         }
+        telemetry.addData("Ultrasonic", robot.getUltrasonicDistance());
+
         telemetry.update();
 
         if (getRuntime() > 15000){
             robot.gyro.calibrate();
         }
+
     }
 
     /*
@@ -123,7 +126,7 @@ public class AutoMode extends OpMode
             case 1:
                 //the target heading is 315 from the heading zero that the robot should be positioned at now.
                 driveToHeading(42, -.5, 5);
-                if (Math.abs(robot.gyro.getHeading() - 45) < 5)
+                if (Math.abs(robot.gyro.getHeading() - 40) < 5)
                 {
                     autoState++;
                     resetDriveEncoders();
@@ -136,7 +139,7 @@ public class AutoMode extends OpMode
                 //there are 1440 ticks per each revolution
                 rightThrottle = (.5);
                 leftThrottle = (.5);
-                if (averageEncoders() > 1000) {
+                if (averageEncoders() > inchesToTicks(4, 37)) {
                     resetDriveEncoders();
                     autoState++;
                     leftThrottle = 0;
@@ -146,19 +149,26 @@ public class AutoMode extends OpMode
             //Target heading is zero
 
             case 3:
-                driveToHeading(0, -.5, 5);
+                driveToHeading(3, -.5, 5);
                 if (robot.gyro.getHeading() < 3) {
                     autoState++;
                     resetDriveEncoders();
                 }
                 break;
             case 4:
-                driveToHeading(0, -.3, 10);
-                if (averageEncoders() > 10000 || robot.groundSensor.alpha() > LIGHT_THRESHOLD) {
+                rightThrottle = .1;
+                leftThrottle = .1;
+                if (averageEncoders() > 2000 || robot.groundSensor.red() > LIGHT_THRESHOLD) {
                     autoState++;
                     resetDriveEncoders();
+                    rightThrottle = 0;
+                    leftThrottle = 0;
 
                 }
+                break;
+            case 5:
+                rightThrottle = 0;
+                leftThrottle = 0;
             default:
                 telemetry.addData("An error has occured", "");
                 break;
@@ -174,6 +184,7 @@ public class AutoMode extends OpMode
         telemetry.addData("Average Encoders", averageEncoders());
         telemetry.addData("Left", leftThrottle);
         telemetry.addData("Right", rightThrottle);
+        telemetry.addData("Ground Color Red", robot.groundSensor.red());
         robot.rightMotor.setPower(rightThrottle);
         robot.leftMotor.setPower(leftThrottle);
 
@@ -220,7 +231,13 @@ public class AutoMode extends OpMode
         leftThrottle = leftMotor;
 
 
+    }
 
+    public double inchesToTicks(int diameter, double dist) {
+        double circ = (diameter) * 3.14;
+        double answer = dist / circ;
+        answer = answer * 1440;
+        return answer;
     }
 
 

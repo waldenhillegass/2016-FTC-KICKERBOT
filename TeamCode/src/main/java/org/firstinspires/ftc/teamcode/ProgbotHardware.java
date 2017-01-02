@@ -2,6 +2,8 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor;
 import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro;
+import com.qualcomm.robotcore.hardware.AnalogInput;
+import com.qualcomm.robotcore.hardware.AnalogSensor;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -33,7 +35,7 @@ public class ProgbotHardware {
     public ColorSensor groundSensor;
     public ColorSensor pokerColor;
     public ModernRoboticsI2cGyro gyro;
-
+    public AnalogInput ultrasonic;
 
     /* Local OpMode members. */
     HardwareMap hwMap = null;
@@ -57,7 +59,7 @@ public class ProgbotHardware {
         gyro = (ModernRoboticsI2cGyro) hwMap.gyroSensor.get("gyro");
 
         rightMotor.setDirection(DcMotor.Direction.REVERSE);
-
+        ultrasonic = hwMap.analogInput.get("ultrasonic");
         // Set all motors to zero power
         leftMotor.setPower(0);
         rightMotor.setPower(0);
@@ -76,6 +78,11 @@ public class ProgbotHardware {
 
         // Define and initialize ALL installed servos.
 
+    }
+
+    public double getUltrasonicDistance() {
+        double VFiveMM = 0.009671875;
+        return ultrasonic.getVoltage() * VFiveMM;
     }
 
     /***
