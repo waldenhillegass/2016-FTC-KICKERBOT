@@ -45,3 +45,4 @@ TeamCode/build
 doc/
 libs/
 gradle/	
+.idea/
