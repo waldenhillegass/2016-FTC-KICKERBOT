@@ -238,5 +238,12 @@ public class AutoMode extends OpMode
 
     }
 
+    public double calcDistance(int diameter, double dist){
+        double circ = (diameter/2)*3.14;
+        double answer = dist/circ;
+        answer = answer *1440;
+        return answer;
+    }
+
 
 }
